@@ -8,7 +8,7 @@ class Exercise15{
 		if (N < 86400) {
 		    System.out.println(H + " Hours, " + M + " Minutes, " + S + " Secondes");
 		} else {
-			N = N - 86400;
+			H = H % 24;
 			System.out.println("Another day " + H + " Hours, " + M + " Minutes, " + S + " Secondes");
 		}
 	}
