@@ -1,4 +1,4 @@
-class Customer{
+public class Customer{
 	private int ID;
 	private String Name;
 	private String SurName;
@@ -83,24 +83,32 @@ class Customer{
         System.out.println("Bank accaunt : " + getBank());
     }
 
-    public NewRecord(int a, String b, String c, String d, String e, double f, long g, long h) {
+    public void NewRecord(int a, String b, String c, String d, String e, double f, long g, long h) {
     	setID(a);
         setName(b);
         setSurName(c);
         setFatherName(d);
         setAdress(e);
         setSum(f);
-        setard(g);
+        setCard(g);
         setBank(h);
     }
-}
 
-class Exercise53{
-	public static void main(String[] args) {
-		Customer obj = new Customer();
-		obj.NewRecord(25, "Vasya", "Pypkin", "*", "g. Odessa", 100500, 102033, 301032);
-		System.out.println(obj);
+    public Customer() { }
 
+    public Customer(int a, String b, String c, String d, String e, double f, long g, long h) {
+    	setID(a);
+        setName(b);
+        setSurName(c);
+        setFatherName(d);
+        setAdress(e);
+        setSum(f);
+        setCard(g);
+        setBank(h);
+    }
+
+    public String toString() {
+		return "ID : " + ID  + "\nName : " + Name + "\nLast name : " + SurName + "\nFather's name : " + FatherName + "\nAdress : " + Adress
+		+ "\nTotal sum : " + Sum + "\nCredit card number : " + Card + "\nBank accaunt : " + Bank;
 	}
-	
 }
